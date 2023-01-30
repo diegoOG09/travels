@@ -1,11 +1,13 @@
 <script setup>
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
+import UpcomingTrips from './components/UpcomingTrips.vue'
+import Mainv2 from './components/Mainv2.vue';
 </script>
 
 <template>
-  <Header />
-  <Main />
+  <Mainv2 />
+  <UpcomingTrips />
 </template>
 
 <style scoped>
