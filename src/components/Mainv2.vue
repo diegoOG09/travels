@@ -2,6 +2,7 @@
   <div class="mainv2">
     <Header />
     <Main />
+    <img id="background-img" src="/mountains-1-crop.jpg" alt="">
   </div>
 </template>
 
@@ -12,10 +13,14 @@ import Header from "./Header.vue";
 
 <style lang="scss" scoped>
 .mainv2 {
-  background-image: url("public/mountains-1-crop.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  height: 100vh;
+  margin-bottom: 7.2rem;
+  #background-img {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    filter: brightness(.75);
+  }
 }
 </style>
