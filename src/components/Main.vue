@@ -40,7 +40,7 @@ main {
     font-family: $montserrat;
     font-size: 1.8rem;
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   #main_button {
     font-weight: 700;

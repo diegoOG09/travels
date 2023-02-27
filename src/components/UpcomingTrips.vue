@@ -1,6 +1,6 @@
 <script setup>
 import { db } from '../services/firebase/index'
-import { collection, getDocs, query } from "firebase/firestore"
+import { collection, getDocs } from "firebase/firestore"
 import { ref, onMounted } from 'vue'
 
 const travels = ref([])
@@ -9,18 +9,23 @@ onMounted( async () => {
   const querySnapshot = await getDocs(collection(db, "travels"))
   let firebase_Travels = []
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data())
-    const travel = {
+    if(doc.data().status === 'upcoming') {
+      const travel = {
       id: doc.id,
       title: doc.data().title,
       location: doc.data().location,
       description: doc.data().description,
-      banner_image: doc.data().banner_image
+      banner_image: doc.data().banner_image,
+      status: doc.data().status
+      }
+      firebase_Travels.push(travel)
     }
-    firebase_Travels.push(travel)
+    
   })
   travels.value = firebase_Travels
 })
+
+
 </script>
 
 <template>
@@ -33,12 +38,14 @@ onMounted( async () => {
 
       <div class="upcards-grid container">
         <div class="upcard" v-for="trip in travels" :key="trip.id">
-          <img :src="trip.banner_image" alt="Banner image">
-          <div class="upcard-info">
-            <h1>{{ trip.title }}</h1>
-            <span>📍{{ trip.location }}</span>
-            <p>{{ trip.description }}</p>
-            <a id="to_trip_button" href="#">Me interesa</a>
+          <div>
+            <img :src="trip.banner_image" alt="Banner image">
+            <div class="upcard-info">
+              <h1>{{ trip.title }}</h1>
+              <span>📍{{ trip.location }}</span>
+              <p>{{ trip.description }}</p>
+              <a id="to_trip_button" href="#">Me interesa</a>
+            </div>
           </div>
         </div>
       </div>
@@ -46,12 +53,12 @@ onMounted( async () => {
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../styles/variables";
-h1,h2,h3,p, span {
-  margin: 0;
-}
 .upcoming-trips {
+  h1,h2,h3,p, span {
+    margin: 0;
+  }
   background-color: $gray;
   padding: 8rem 0;
   h3 {
@@ -112,18 +119,17 @@ h1,h2,h3,p, span {
           text-decoration: none;
           color: $white;
           background-color: $deep-blue;
-          padding: 1.5rem 1rem;
+          padding: 1rem 1.5rem;
           font-size: 1rem;
           transition: .5s;
           font-family: $normal-text;
           &:hover {
             font-size: 1.05rem;
-            padding: 1rem 1.5rem;
+            padding: .5rem 1.5rem;
             transition: .5s;
           }
         }
       }
-      
     }
   }
 }

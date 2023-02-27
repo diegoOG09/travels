@@ -32,6 +32,7 @@
 <style lang="scss" scoped>
 @import "../styles/variables";
 header {
+  backdrop-filter: blur(5px);
   margin-bottom: 4rem;
   nav {
     display: flex;
@@ -42,9 +43,11 @@ header {
     padding: 2rem 0 0 0;
 
     .nav_title {
+      margin-top: -5px;
+      padding-left: 2rem;
       display: flex;
       align-items: center;
-      width: 30%;
+      width: 22%;
       color: $white;
       #nav_image {
         filter: invert(95%);
