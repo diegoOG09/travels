@@ -20,7 +20,6 @@
       </div>
       <div class="nav_login">
         <a href="#">Iniciar sesión</a>
-        <a id="sign_up" href="#">Regístrate</a>
       </div>
     </nav>
   </header>

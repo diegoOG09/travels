@@ -63,5 +63,11 @@ const props = defineProps({
   p {
     color: $white;
   }
+  .upcard {
+    background-color: $gray;
+    p {
+      color: $sea-deep;
+    }
+  }
 }
 </style>
