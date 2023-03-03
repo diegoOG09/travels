@@ -1,3 +1,7 @@
+<script>
+import router from '../routes/router'
+</script>
+
 <template>
   <header>
     <nav class="container">
@@ -11,7 +15,7 @@
       </div>
       <div class="nav_items">
         <ul>
-          <li><a href="#">Inicio</a></li>
+          <RouterLink ref="home" to="/">Inicio</RouterLink>
           <li><a href="#">Viajar</a></li>
           <li><a href="#">Contacto</a></li>
           <li><a href="#">Nosotros</a></li>
@@ -19,20 +23,17 @@
         </ul>
       </div>
       <div class="nav_login">
-        <a href="#">Iniciar sesión</a>
+        <RouterLink ref="login" to="/login">Iniciar sesión</RouterLink>
       </div>
     </nav>
   </header>
 </template>
 
-<script>
-</script>
-
 <style lang="scss" scoped>
 @import "../styles/variables";
 header {
-  backdrop-filter: blur(5px);
-  margin-bottom: 4rem;
+  background-image: linear-gradient(to left top, #003268, #004f81, #006c8d, #00878d, #16a085);
+  // backdrop-filter: blur(5px);
   nav {
     display: flex;
     align-items: center;
