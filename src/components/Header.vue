@@ -1,5 +1,5 @@
 <script>
-import router from '../routes/router'
+
 </script>
 
 <template>
@@ -32,7 +32,7 @@ import router from '../routes/router'
 <style lang="scss" scoped>
 @import "../styles/variables";
 header {
-  background-image: linear-gradient(to left top, #003268, #004f81, #006c8d, #00878d, #16a085);
+  background-image: linear-gradient(to top, #003268, #004f81, #006c8d, #00878d, #16a085);
   // backdrop-filter: blur(5px);
   nav {
     display: flex;
