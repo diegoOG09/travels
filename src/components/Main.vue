@@ -21,7 +21,7 @@
 main {
   padding-bottom: 10rem;
   padding-top: 3rem;
-  background-image: linear-gradient(to bottom, #003268, #004f81, #006c8d, #00878d, #16a085);
+  background-image: linear-gradient(to right bottom, #00566d, #006772, #1d7772, #40866f, #63936a);
   .main_text {
     line-height: 5.5rem;
     margin-bottom: 3rem;
