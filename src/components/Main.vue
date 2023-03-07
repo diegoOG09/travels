@@ -21,7 +21,7 @@
 main {
   padding-bottom: 10rem;
   padding-top: 3rem;
-  background-image: url('../../public/lalo-hernandez-Amo081zdJsI-unsplash.jpg');
+  background-image: url('/lalo-hernandez-Amo081zdJsI-unsplash-min.jpg');
   background-repeat: no-repeat;
   background-position: center;
   .main_text {

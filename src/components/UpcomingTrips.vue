@@ -62,7 +62,7 @@ onMounted( async () => {
   justify-content: center;
   margin-top: 4rem;
   #view_more_btn {
-    background-color: #1abc9c;
+    background-color: $green;
   }
 }
 .upcoming-trips {

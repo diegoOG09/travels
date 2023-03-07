@@ -11,7 +11,7 @@
           <div class="nav_title">
             <img
               id="nav_image"
-              src="../../public/PngItem_3542954.png"
+              src="/PngItem_3542954.png"
               alt="travel header icon"
             />
             <h1>Viajes Bernal</h1>
