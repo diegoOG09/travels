@@ -21,7 +21,9 @@
 main {
   padding-bottom: 10rem;
   padding-top: 3rem;
-  background-image: linear-gradient(to right bottom, #00566d, #006772, #1d7772, #40866f, #63936a);
+  background-image: url('../../public/lalo-hernandez-Amo081zdJsI-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   .main_text {
     line-height: 5.5rem;
     margin-bottom: 3rem;
@@ -54,8 +56,8 @@ main {
     width: 15rem;
     color: $white;
     text-decoration: none;
-    font-family: $montserrat;
-    background-color: $green;
+    font-family: $poppins;
+    background-color: $blue;
     padding: 1rem 2.5rem;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
