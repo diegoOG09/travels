@@ -1,12 +1,13 @@
 <script setup>
 import Header from './components/Header.vue'
-import Home from './components/Home.vue'
 import ContentView from './components/ContentView.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
   <Header />
   <ContentView />
+  
 </template>
 
 <style scoped>
